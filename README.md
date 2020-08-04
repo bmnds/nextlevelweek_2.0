@@ -2,7 +2,7 @@
 Profy - Plataforma para professores e alunos
 
 # Aula 1
-````shell
+```shell
 $ yarn create react-app web --template typescript
 
 ```

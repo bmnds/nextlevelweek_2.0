@@ -7,6 +7,8 @@ import studySvg from '../../assets/images/icons/study.svg'
 import teachSvg from '../../assets/images/icons/teach.svg'
 import purpleHeartSvg from '../../assets/images/icons/purple-heart.svg'
 
+import {Link} from 'react-router-dom'
+
 function Landing() {
     return (
         <div id="page-landing">
@@ -18,18 +20,21 @@ function Landing() {
                 <img src={landingSvg} className="hero-image" 
                     alt="Plataforma de estudos" />
                 <div className="buttons-container">
-                    <a href="" className="study">
+                    <Link to="study" className="study">
                         <img src={studySvg} alt="Estudar" />
                         Estudar
-                    </a>
-                    <a href="" className="teach">
+                    </Link>
+                    <Link to="teach" className="teach">
                         <img src={teachSvg} alt="Lecionar" />
                         Lecionar
-                    </a>
+                    </Link>
                 </div>
-                <span className="total-connections">
-                    Total de 200 conexões já realizadas <img src={purpleHeartSvg} alt="Coração roxo" />
-                </span>
+                <div className="total-connections">
+                    <span>
+                        Total de 200 conexões já realizadas
+                        <img src={purpleHeartSvg} alt="Coração roxo" />
+                    </span>
+                </div>
             </div>
         </div>
     )

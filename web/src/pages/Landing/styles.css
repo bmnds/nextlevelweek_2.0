@@ -10,6 +10,10 @@
     background: var(--color-primary);
 }
 
+#page-landing .container {
+    width: 90vw;
+}
+
 .logo-container img {
     height: 9rem;
 }

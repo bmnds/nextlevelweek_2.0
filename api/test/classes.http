@@ -1,0 +1,17 @@
+### Create Class
+POST http://localhost:8080/classes HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Bruno Mendes",
+    "bio": "Engenheiro de formação, Programador de profissão, Investidor de paixão e Aventureiro por emoção",
+    "avatar": "https://avatars0.githubusercontent.com/u/433506?s=460&u=29334cfd31a7664c7b60a4e74b15a324a50a9ed5&v=4",
+    "whatsapp": "929999999",
+    "subject": "Educação Financeira",
+    "cost": 80.00,
+    "schedules": [
+        { "week_day": "SEG", "from": "08:00", "to": "12:00" },
+        { "week_day": "QUA", "from": "08:00", "to": "12:00" },
+        { "week_day": "SEX", "from": "08:00", "to": "12:00" }
+    ]
+}

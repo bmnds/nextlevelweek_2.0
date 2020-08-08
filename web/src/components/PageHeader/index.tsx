@@ -10,18 +10,20 @@ import './styles.css'
 interface PageHeaderProps {
     children?: ReactNode
     title: string
+    showTopBar?: boolean
 }
 
 function PageHeader(props: PageHeaderProps) {
     return (
         <header id="page-header">
+        { props.showTopBar &&
             <div className="top-bar-container">
                 <Link to="/">
                     <img src={backIconSvg} alt="Voltar" />
                 </Link>
                 <img src={logoSvg} alt="Proffy" />
             </div>
-            
+        }  
             <div className="header-content">
                 <strong>{props.title}</strong>
 
@@ -29,6 +31,10 @@ function PageHeader(props: PageHeaderProps) {
             </div>
         </header>
     )
+}
+
+PageHeader.defaultProps = {
+    showTopBar: true
 }
 
 export default PageHeader

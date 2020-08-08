@@ -1,0 +1,63 @@
+#teacher-modal {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-primary);
+}
+
+#teacher-modal .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#teacher-modal .break {
+    flex-basis: 100%;
+    height: 0;
+}
+
+#teacher-modal header {
+    height: calc(100vh - 15rem);
+    background-image:  url(../../assets/images/teach-background.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-top: 2em;
+    margin-left: 2em;
+}
+
+#teacher-modal header .header-container {
+    width: 80%;
+}
+
+#teacher-modal header strong {
+    font: 700 3rem Archivo;
+    line-height: 4rem;
+    color: var(--color-title-in-primary);
+}
+
+#teacher-modal header h3 {
+    font: 500 1.7rem Poppins;
+    color: var(--color-text-in-primary);
+}
+
+#teacher-modal main {
+    height: 15rem;
+}
+#teacher-modal main a button {
+    border: 0;
+    border-radius: 0.8em;
+    width: 30rem;
+    height: 5rem;
+    color: var(--color-button-text);
+    background-color: var(--color-secondary);
+    transition: opacity 0.2s;
+}
+
+#teacher-modal main a button:hover {
+    opacity: 0.6;
+}

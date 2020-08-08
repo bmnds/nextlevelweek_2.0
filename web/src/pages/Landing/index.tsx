@@ -24,7 +24,7 @@ function Landing() {
                         <img src={studySvg} alt="Estudar" />
                         Estudar
                     </Link>
-                    <Link to="teach" className="teach">
+                    <Link to="beforeTeach" className="teach">
                         <img src={teachSvg} alt="Lecionar" />
                         Lecionar
                     </Link>

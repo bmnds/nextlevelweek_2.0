@@ -1,7 +1,7 @@
 import express from 'express'
 
-import UserController from './domains/user/user.controller'
-import ClassController from './domains/class/class.controller'
+import UserController from './user/user.controller'
+import ClassController from './class/class.controller'
 
 const app = express()
 

@@ -5,8 +5,8 @@ export async function up(knex: Knex) {
         table.integer('id').primary()
 
         table.string('week_day').notNullable()
-        table.integer('from').notNullable()
-        table.integer('to').notNullable()
+        table.integer('time_start').notNullable()
+        table.integer('time_end').notNullable()
 
         table.integer('class_id')
             .notNullable()

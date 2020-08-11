@@ -12,7 +12,6 @@ afterAll(async () => {
     await db.migrate.rollback()
 })
 
-
 describe('Create Class Test', () => {
     it('should create a class and return its id on location header', async (done) => {
         const res = await request(app)
@@ -37,13 +36,13 @@ describe('Create Class Test', () => {
 })
 
 describe('List Classes Test', () => {
-    it('should list all classes when no filter is passed', async (done) => {
+    it('should return no processable entity when no filter is passed', async (done) => {
         request(app)
             .get('/classes')
             .expect(422, done)
     })
 
-    it('should return nothing when week_day is nowhere to be found', async (done) => {
+    it('should return resource not found when there are no classes at `week_day`', async (done) => {
         const searchCriteria = {
             "week_day": "DOM",
             "subject": "Educação Financeira",
@@ -56,7 +55,7 @@ describe('List Classes Test', () => {
             .expect(404, done)
     })
 
-    it('should return nothing when subject is nowhere to be found', async (done) => {
+    it('should return resource not found when there are no classes for the given `subject`', async (done) => {
         const searchCriteria = {
             "week_day": "SEG",
             "subject": "Como bugar a Matrix",
@@ -69,7 +68,7 @@ describe('List Classes Test', () => {
             .expect(404, done)
     })
 
-    it('should return nothing when time is nowhere to be found', async (done) => {
+    it('should return resource not found when there are no classes at the given period of `time`', async (done) => {
         const searchCriteria = {
             "week_day": "SEG",
             "subject": "Educação Financeira",
@@ -82,7 +81,7 @@ describe('List Classes Test', () => {
             .expect(404, done)
     })
 
-    it('should return only classes filtered by the given search criteria', async (done) => {
+    it('should return the class that matches the given search criteria', async (done) => {
         const searchCriteria = {
             "week_day": "SEG",
             "subject": "Educação Financeira",

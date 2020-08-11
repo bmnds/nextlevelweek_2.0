@@ -1,4 +1,4 @@
-### List All Classes
+### Thou shall not list all Classes!
 GET http://localhost:8080/classes
 
 ### List Classes by Week day, Subject and Time

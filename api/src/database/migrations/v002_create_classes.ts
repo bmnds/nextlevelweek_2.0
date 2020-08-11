@@ -1,8 +1,9 @@
 import Knex from 'knex'
 
-export async function up(knex: Knex) {
-    return knex.schema.createTable('classes', table => {
+exports.up = async (knex: Knex) =>
+    knex.schema.createTable('classes', table => {
         table.increments('id').primary()
+
         table.string('subject').notNullable()
         table.decimal('cost', 5, 2).notNullable()
 
@@ -12,8 +13,6 @@ export async function up(knex: Knex) {
             .inTable('users')
             .onDelete('CASCADE')
     })
-}
 
-export async function down(knex: Knex) {
-    return knex.schema.dropTable('classes')
-}
+exports.down = async (knex: Knex) => 
+    knex.schema.dropTable('classes')

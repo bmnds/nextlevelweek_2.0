@@ -6,12 +6,6 @@ import { QueryBuilder } from 'knex'
 
 const ClassController = express.Router()
 
-interface ClassesFilter {
-    week_day: string,
-    subject: string,
-    time: string
-}
-
 interface ScheduleItem {
     week_day: string,
     from: string,

@@ -1,4 +1,3 @@
-import knex from 'knex'
 import Knex from 'knex'
 
 import knexfile from './knexfile'

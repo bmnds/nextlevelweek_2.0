@@ -10,6 +10,7 @@ import './styles.css'
 interface PageHeaderProps {
     children?: ReactNode
     title: string
+    description?: string
     showTopBar?: boolean
 }
 
@@ -26,6 +27,10 @@ function PageHeader(props: PageHeaderProps) {
         }  
             <div className="header-content">
                 <strong>{props.title}</strong>
+
+                { props.description && 
+                    <p>{props.description}</p>
+                }
 
                 {props.children}
             </div>

@@ -18,9 +18,14 @@ function Select({ name, label, options, ...props }: SelectProps) {
         <div className="select-block">
             <label htmlFor={name}>{label}</label>
             <select id={name} autoComplete="off" {...props}> 
-                <option value="" disabled selected hidden>Selecione uma opção...</option>
+                <option value="" disabled hidden>Selecione uma opção...</option>
                 {options.map(option => {
-                    return <option value={option.value}>{option.description}</option>
+                    return (
+                        <option key={option.value} 
+                                value={option.value}>
+                            {option.description}
+                        </option>
+                    )
                 })}
             </select>
         </div>
